@@ -1,0 +1,98 @@
+---
+title: "BloodSample"
+author: "Qiuhan Zhang"
+date: "2023-02-14"
+output: html_document
+---
+
+[My Repository](https://github.com/qiuhan1008/BIOL432_Assignment6.git)
+
+```{r}
+#install.packages("BiocManager")
+#install.packages("Biostrings")
+#install.packages("annotater")
+#install("genbankr")
+
+#load library
+library(dplyr)
+library(BiocManager)
+library(Biostrings)
+library(genbankr)
+library(rentrez)
+```
+
+
+```{r}
+#load unknown sequence
+unknseq <- "GCCTGATGGAGGGGGATAACTACTGGAAACGGTAGCTAATACCGCATGAC
+CTCGCAAGAGCAAAGTGGGGGACCTTAGGGCCTCACGCCATCGGATGAAC
+CCAGATGGGATTAGCTAGTAGGTGGGGTAATGGCTCACCTAGGCGACGAT
+CCCTAGCTGGTCTGAGAGGATGACCAGCCACACTGGAACTGAGACACGGT
+CCAGACTCCTACGGGAGGCAGCAGTGGGGAATATTGCACAATGGGCGCAA"
+```
+
+
+```{r}
+#remove the 'carriage return' and 'newline' special character
+unknseq <- gsub("[\r\n]", "", unknseq)
+unknseq
+```
+```{r}
+library(annotate)
+```
+
+
+```{r}
+useqBLAST <- blastSequences(paste(unknseq),as = 'data.frame', 
+                            hitListSize = 20, timeout = 600 )
+```
+
+```{r}
+#Download ape library from CRAN repository
+#install.packages("ape")
+
+#Use library command to make ape functions accessible by this script
+library(ape)
+```
+
+```{r}
+# create a DNAbin object
+useqHitsDF <- data.frame(ID = useqBLAST$Hit_accession, # specifying an ID column
+                         Seq = useqBLAST$Hsp_hseq,
+                         stringsAsFactors = FALSE)
+```
+
+```{r}
+ # length of each sequence
+useqBLAST$Hit_len
+```
+Those 137 sequences have similiar number of base pairs. 
+
+
+##To determine whether it's human or other organisms
+
+```{r}
+results <- useqBLAST %>%
+select(Hit_def, 
+       Hit_accession, 
+       Hit_len, 
+       Hsp_score, 
+       Hsp_evalue, 
+       Hsp_gaps, 
+       Hsp_qseq)%>%
+  arrange(desc(Hsp_score), .by_group = TRUE)
+head(results)
+```
+
+
+The isolated sequence suggests the unknown sequence is Yersinia pestis chromosome instead of a human genome. 
+
+
+
+
+
+
+
+
+
+

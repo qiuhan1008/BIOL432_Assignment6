@@ -1,0 +1,311 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Analysis},
+  pdfauthor={Qiuhan Zhang},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Analysis}
+\author{Qiuhan Zhang}
+\date{2023-02-14}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#load library}
+\FunctionTok{library}\NormalTok{(readr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(knitr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Import the Sequences.csv file.}
+\NormalTok{Sequences }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"Sequences.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## New names:
+## Rows: 3 Columns: 3
+## -- Column specification
+## -------------------------------------------------------- Delimiter: "," chr
+## (2): Name, Sequence dbl (1): ...1
+## i Use `spec()` to retrieve the full column specification for this data. i
+## Specify the column types or set `show_col_types = FALSE` to quiet this message.
+## * `` -> `...1`
+\end{verbatim}
+
+\#\#Count the number of each base pair (A, T, C and G), in each of the
+three sequences.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#convert to characters}
+\NormalTok{seq\_1 }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(Sequences}\SpecialCharTok{$}\NormalTok{Sequence[}\DecValTok{1}\NormalTok{])}
+\NormalTok{seq\_2 }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(Sequences}\SpecialCharTok{$}\NormalTok{Sequence[}\DecValTok{2}\NormalTok{])}
+\NormalTok{seq\_3 }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(Sequences}\SpecialCharTok{$}\NormalTok{Sequence[}\DecValTok{3}\NormalTok{])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#count the number of each base pair}
+\DocumentationTok{\#\#sequence 1}
+\NormalTok{count1\_A }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}A]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_1))}
+\NormalTok{count1\_T }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}T]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_1))}
+\NormalTok{count1\_C }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}C]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_1))}
+\NormalTok{count1\_G }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}G]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_1))}
+
+\DocumentationTok{\#\#sequence 2}
+\NormalTok{count2\_A }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}A]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_2))}
+\NormalTok{count2\_T }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}T]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_2))}
+\NormalTok{count2\_C }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}C]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_2))}
+\NormalTok{count2\_G }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}G]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_2))}
+
+\DocumentationTok{\#\#sequence 3}
+\NormalTok{count3\_A }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}A]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_3))}
+\NormalTok{count3\_T }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}T]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_3))}
+\NormalTok{count3\_C }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}C]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_3))}
+\NormalTok{count3\_G }\OtherTok{\textless{}{-}} \FunctionTok{nchar}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{"[\^{}G]"}\NormalTok{, }\StringTok{""}\NormalTok{, seq\_3))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Print out each sequence.}
+\FunctionTok{print}\NormalTok{(seq\_1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "AGCATGCAAGTCAAACGAGATGTAGCAATACATCTAGTGGCGAACGGGTGAGTAACGCGTGGATGATCTACCTATGAGATGGGGATAACTATTAGAAATAGTAGCTAATACCGAATAAGGTCAATTAATTTGTTAATTGATGAAAGGAAGCCTTTAAAGCTTCGCTTGTAGATGAGTCTGCGTCTTATTAGTTAGTTGGTAGGGTAAATGCCTACCAAGGCGATGATAAGTAACCGGCCTGAGAGGGTGAACGGTCACACTGGAACTGAGACACGGTCCAGACTCCTACGGGAGGCAGCAGCTAAGAATCTTCCGCAATGGGCGAAAGCCTGACGGAGCGACACTGCGTGAATGAAGAAGGTCGAAAGATTGTAAAATTCTTTTATAAATGAGGAATAAGCTTTGTAGGAAATGACGAAGTGATGACGTTAATTTATGAATAAGCCCCGGCTAATTACGTGCCAGCAGCCGCGGTAATACG"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(seq\_2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "AGCATGCAAGTCAAACGGGATGTAGCAATACATTCAGTGGCGAACGGGTGAGTAACGCGTGGATGATCTACCTATGAGATGGGGATAACTATTAGAAATAGTAGCTAATACCGAATAAGGTCAGTTAATTTGTTAATTGATGAAAGGAAGCCTTTAAAGCTTCGCTTGTAGATGAGTCTGCGTCTTATTAGCTAGTTGGTAGGGTAAATGCCTACCAAGGCAATGATAAGTAACCGGCCTGAGAGGGTGAACGGTCACACTGGAACTGAGATACGGTCCAGACTCCTACGGGAGGCAGCAGCTAAGAATCTTCCGCAATGGGCGAAAGCCTGACGGAGCGACACTGCGTGAATGAAGAAGGTCGAAAGATTGTAAAATTCTTTTATAAATGAGGAATAAGCTTTGTAGGAAATGACAAAGTGATGACGTTAATTTATGAATAAGCCCCGGCTAATTACGTGCCAGCAGCAGCGGTAATACG"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{print}\NormalTok{(seq\_3)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "AGCATGCAAGTCAAACGAGATGTAGTAATACATCTAGTGGCGAACGGGTGAGTAACGCGTGGATGATCTACCTATGAGATGGGGATAACTATTAGAAATAGTAGCTAATACCGAATAAGGTCAATTAATTTGTTAATTGATGAAAGGAAGCCTTTAAAGCTTCGCTTGTAGATGAGTCTGCGTCTTATTAGTTAGTTGGTAGGGTAAATGCCTACCAAGGCGATGATAAGTAACCGGCCTGAGAGGGTGAACGGTCACACTGGAACTGAGACACGGTCCAGACTCCTACGGGAGGCAGCAGCTAAGAATCTTCCGCAATGGGCGAAAGCCTGACGGAGCGACACTGCGTGAATGAAGAAGGTCGAAAGATTGTAAAATTCTTTTATAAATGAGGAATAAGCTTTGTAGGAAATGACGAAGTGATGACGTTAATTTATGAATAAGCCCCGGCTAATTACGTGCCAGCAGCCGCGGTAATACG"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Print out the number of each nucleotide as a table for each of the three sequences.}
+\NormalTok{results }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{Sequence\_Name =} \FunctionTok{c}\NormalTok{(}\StringTok{"HQ433692.1"}\NormalTok{, }\StringTok{"HQ433694."}\NormalTok{, }\StringTok{"HQ433691.1"}\NormalTok{),}
+                          \AttributeTok{A =} \FunctionTok{c}\NormalTok{(count1\_A, count2\_A, count3\_A),}
+                          \AttributeTok{T =} \FunctionTok{c}\NormalTok{(count1\_T, count2\_T, count3\_T),}
+                          \AttributeTok{C =} \FunctionTok{c}\NormalTok{(count1\_C, count2\_C, count3\_C),}
+                          \AttributeTok{G =} \FunctionTok{c}\NormalTok{(count1\_G, count2\_G, count3\_G))}
+\FunctionTok{print}\NormalTok{(results)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   Sequence_Name   A   T  C   G
+## 1    HQ433692.1 154 114 82 131
+## 2     HQ433694. 155 114 81 131
+## 3    HQ433691.1 154 115 81 131
+\end{verbatim}
+
+\#\#Include an image of a bacteria from the internet, and a link to the
+Wikipedia page about Borrelia burgdorferi
+
+\href{PIXNIO-38518-4252x2890.jpeg}{Photo of Borrelia burgdorferi}
+
+\href{https://en.wikipedia.org/wiki/Borrelia_burgdorferi}{Borrelia
+burgdorferi wikipedia link}
+
+\#\#Calculate GC Content (\% of nucleotides that are G or C) and create
+a final table showing GC content for each sequence ID
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{GC\_count }\OtherTok{\textless{}{-}}\NormalTok{ results }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{group\_by}\NormalTok{(Sequence\_Name) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{GC\_count =}\NormalTok{ ((C }\SpecialCharTok{+}\NormalTok{G) }\SpecialCharTok{/}\NormalTok{ (A }\SpecialCharTok{+}\NormalTok{ T }\SpecialCharTok{+}\NormalTok{ C }\SpecialCharTok{+}\NormalTok{ G)) }\SpecialCharTok{*} \DecValTok{100}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(Sequence\_Name, GC\_count)}
+\NormalTok{GC\_count}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+## # Groups:   Sequence_Name [3]
+##   Sequence_Name GC_count
+##   <chr>            <dbl>
+## 1 HQ433692.1        44.3
+## 2 HQ433694.         44.1
+## 3 HQ433691.1        44.1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{data1 }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\StringTok{"\textasciitilde{}/Desktop/data1.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 3 Columns: 2
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (2): Sequence_Name, GC_count
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{table1 }\OtherTok{\textless{}{-}}\NormalTok{ data1 }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(Sequence\_Name, GC\_count)}
+\NormalTok{table1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+##   Sequence_Name GC_count
+##   <chr>         <chr>   
+## 1 HQ433692.1    44.28%  
+## 2 HQ433694.     44.07%  
+## 3 HQ433694.     44.07%
+\end{verbatim}
+
+\end{document}
